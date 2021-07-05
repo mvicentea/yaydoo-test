@@ -10,7 +10,7 @@ import Router from 'next/router'
 
 export async function getStaticProps(context){
 
-    const res = await fetch("http://localhost:3000/api/products");
+    const res = await fetch("https://yaydoo-test.vercel.app/api/products");
     const data = await res.json();
   
     return {
@@ -31,7 +31,7 @@ const products = ({products_list}) => {
     }
 
     const deleteProduct = async (id)  => {
-        const res = await fetch(`http://localhost:3000/api/product/${id}`,{
+        const res = await fetch(`https://yaydoo-test.vercel.app/api/product/${id}`,{
             method: "DELETE"
         });
         await res.json();
@@ -39,7 +39,7 @@ const products = ({products_list}) => {
     }
 
     const findProduct = async (id) => {
-        const res = await fetch(`http://localhost:3000/api/product/${id}`);
+        const res = await fetch(`https://yaydoo-test.vercel.app/api/product/${id}`);
         const data_p = await res.json();
         setProduct(data_p);
         return (data_p);
