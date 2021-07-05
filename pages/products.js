@@ -65,7 +65,7 @@ export default products;
 
 export async function getStaticProps(context){
 
-    const res = await fetch(process.env.NEXTAUTH_URL+"/api/products");
+    const res = await fetch("https://yaydoo-test.vercel.app/api/products");
     const data = await res.json();
   
     return {
