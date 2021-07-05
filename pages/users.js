@@ -5,7 +5,7 @@ import { useUser } from '../lib/hooks'
 
 
 export async function getStaticProps(context){
-    const res = await fetch("https://yaydoo-test.vercel.app/api/users");
+    const res = await fetch(process.env.NEXTAUTH_URL+"/api/users");
     const data = await res.json();
   
     return {
