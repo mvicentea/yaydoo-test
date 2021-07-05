@@ -4,7 +4,7 @@ import AlertSession from '../components/AlertSession'
 import { useUser } from '../lib/hooks'
 
 
-export async function getStaticProps(context){
+export async function getServerSideProps(context){
     const res = await fetch(process.env.NEXTAUTH_URL+"/api/users");
     const data = await res.json();
   
