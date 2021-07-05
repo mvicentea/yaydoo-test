@@ -9,18 +9,6 @@ import Router from 'next/router'
 
 
 
-export async function getServerSideProps(context){
-
-    const res = await fetch(process.env.NEXTAUTH_URL+"/api/products");
-    const data = await res.json();
-  
-    return {
-        props:{
-            products_list : data
-        }
-    }
-  }
-
 const products = ({products_list}) => {
     const user = useUser();
     const [action, setAction] =  useState ('create');
@@ -74,3 +62,15 @@ const products = ({products_list}) => {
 }
 
 export default products;
+
+export async function getStaticProps(context){
+
+    const res = await fetch(process.env.NEXTAUTH_URL+"/api/products");
+    const data = await res.json();
+  
+    return {
+        props:{
+            products_list : data
+        }
+    }
+  }
