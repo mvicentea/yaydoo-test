@@ -3,16 +3,7 @@ import Table from "../components/Table"
 import AlertSession from '../components/AlertSession'
 import { useUser } from '../lib/hooks'
 
-export async function getServerSideProps(context){
-    const res = await fetch(process.env.NEXTAUTH_URL+"/api/users");
-    const data = await res.json();
-  
-    return {
-        props:{
-            user_list : data
-        }
-    }
-  }
+
 
 const users = ({user_list}) => {
     const user = useUser();
@@ -33,3 +24,14 @@ const users = ({user_list}) => {
 
 export default users;
 
+
+export async function getServerSideProps(context){
+    const res = await fetch(process.env.NEXTAUTH_URL+"/api/users");
+    const data = await res.json();
+  
+    return {
+        props:{
+            user_list : data
+        }
+    }
+  }
