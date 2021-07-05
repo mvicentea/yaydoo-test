@@ -3,7 +3,9 @@ import Table from "../components/Table"
 import AlertSession from '../components/AlertSession'
 import { useUser } from '../lib/hooks'
 
-const products = ({user_list}) => {
+
+
+const users = ({user_list}) => {
     const user = useUser();
     return (<>
             <Head>
@@ -20,7 +22,7 @@ const products = ({user_list}) => {
     )
 }
 
-export default products;
+export default users;
 
 export async function getStaticProps(context){
     const res = await fetch(process.env.NEXTAUTH_URL+"/api/users");
