@@ -63,9 +63,9 @@ const products = ({products_list}) => {
 
 export default products;
 
-export async function getStaticProps(context){
+export async function getServerSideProps(context){
 
-    const res = await fetch("https://yaydoo-test.vercel.app/api/products");
+    const res = await fetch("https://yaydoo-test.vercel.app/api/products/api/products");
     const data = await res.json();
   
     return {
