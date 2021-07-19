@@ -20,207 +20,55 @@
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
-    /*padding: 0 1rem;*/
+    padding: 0 1rem;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    transition: .5s
+    transition: .5s;
+    padding-left: 0px;
+    padding-right: 0px;
+
 }
 
 a {
     text-decoration: none
 }
 
-.header {
-    width: 100%;
-    height: var(--header-height);
-    position: fixed;
-    top: 0;
-    left: 0;
+.MuiOutlinedInput-input {
+    padding: 8px!important;
+}
+
+.MuiInputLabel-outlined {
+    z-index: 1;
+    transform: translate(10px, 12px) scale(1)!important;
+    pointer-events: none;
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, -6px) scale(0.75)!important;
+}
+
+.content-login {
+    /*background-image: url("../public/images/headerlogin.jpg");
+    background-size: contain;*/
+    background-blend-mode: color;
+}
+
+main#content-products {
+    padding-top: 40px;
+}
+
+div#content-button-create {
+    padding-bottom: 15px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-    background-color: var(--white-color);
-    z-index: var(--z-fixed);
-    transition: .5s
-}
-.header_toggle {
-    color: var(--first-color);
-    font-size: 1.5rem;
-    cursor: pointer
-}
-
-.header_img {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
-    overflow: hidden
-}
-
-.header_img img {
-    width: 40px
-}
-
-.l-navbar {
-    position: fixed;
-    top: 0;
-    left: -30%;
-    width: var(--nav-width);
-    height: 100vh;
-    background-color: var(--first-color);
-    padding: .5rem 1rem 0 0;
-    transition: .5s;
-    z-index: var(--z-fixed)
-}
-
-.nav {
-    height: 100%;
-    display: flex;
+    padding: 0;
+    flex-grow: 1;
+    align-items: flex-end;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
     flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden
 }
 
-.nav_logo,
-.nav_link {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    align-items: center;
-    column-gap: 1rem;
-    padding: .5rem 0 .5rem 1.5rem
+main#content-users {
+    padding-top: 40px;
 }
-
-.nav_logo {
-    margin-bottom: 2rem
-}
-
-.nav_logo-icon {
-    font-size: 1.25rem;
-    color: var(--white-color)
-}
-.nav_logo-name {
-    color: var(--white-color);
-    font-weight: 700
-}
-
-.nav_link {
-    position: relative;
-    color: var(--first-color-light);
-    margin-bottom: 1.5rem;
-    transition: .3s
-}
-
-.nav_link:hover {
-    color: var(--white-color)
-}
-
-.nav_icon {
-    font-size: 1.25rem
-}
-
-.show {
-    left: 0
-}
-
-.body-pd {
-    padding-left: calc(var(--nav-width) + 1rem)
-}
-
-
-.active {
-    color: var(--white-color)
-}
-
-.active::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 2px;
-    height: 32px;
-    background-color: var(--white-color)
-}
-
-.height-100 {
-    height: 100vh
-}
-
-div#login {
-    /*background-color: #17a2b8;*/
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-  }
-  div#login {
-    background-color: #e4f5f8;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-  }
-    #login .container #login-row #login-column #login-box {
-      margin-top: 30px;
-      max-width: 600px;
-      height: 350px;
-      border: 1px solid #9C9C9C;
-    
-    }
-    #login .container #login-row #login-column #login-box #login-form {
-      padding: 20px;
-    }
-
-    #login .container #login-row #login-column #login-box #login-form #register-link {
-        margin-top: -62px;
-        text-align: end;
-    }
-
-    #login .container #login-row #login-column #register-box {
-        padding: 20px;
-        margin-top: 30px;
-        max-width: 600px;
-        height: 560px;
-        border: 1px solid #9C9C9C;
-        
-    }
-
-    @media screen and (min-width: 768px) {
-        #__next {
-            margin: calc(var(--header-height) + 1rem) 0 0 0;
-            padding-left: calc(var(--nav-width) + 1rem) ;
-        }
-        div#__next.body-pd > div#main-container {
-            padding-left:calc(var(--nav-width) + 6rem);
-        }
-        .header {
-            height: calc(var(--header-height) + 1rem);
-            padding: 0 1rem 0 calc(var(--nav-width) + 1rem)
-        }
-
-        .header_img {
-            width: 40px;
-            height: 40px
-        }
-        .header_img img {
-            width: 45px
-        }
-        .l-navbar {
-            left: 0;
-            padding: 1rem 1rem 0 0
-        }
-        .body-pd {
-            padding-left: calc(var(--nav-width) + 188px)
-        }
-        .sliNanShow {
-            width: calc(var(--nav-width) + 156px)
-        }
-
-
-
-    
-    }
-
-
-
-
-
-    

@@ -8,6 +8,8 @@ export default async (req, res) => {
           break;
         case "DELETE": deleteProduct(req, res);
           break;
+        case "PUT": updateProduct(req, res);
+          break;
       }
 }
 
@@ -20,6 +22,12 @@ const getProduct = async (req, res)  => {
 const deleteProduct = async (req, res)  => {
     const {pid} = req.query;
     const product = await Product.findByIdAndDelete({_id:pid});
+    res.status(200).json(product);
+}
+
+const updateProduct = async (req, res)  => {
+    const {pid} = req.query;
+    const product = await Product.findByIdAndUpdate(pid, req.body);
     res.status(200).json(product);
 }
 

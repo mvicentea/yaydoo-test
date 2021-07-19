@@ -5,10 +5,10 @@ connectionDb();
 export default  function (req, res) {
 	try {
 		const {name, price, quantity, available, sku, description, mediaUrl} = req.body;
-		// validation passed
+
         Product.findOne({sku: sku}).then( product =>{
 				if(product){
-					return res.status(403).json('Product is already exits');
+					return res.status(403).json('The Product was not created, it was previously created');
 				}else{
 					const newProduct = new Product({name, price, quantity, available, sku, description, mediaUrl});
                     

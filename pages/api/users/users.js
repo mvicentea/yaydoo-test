@@ -1,5 +1,5 @@
-import User from "../../models/User"
-import connectionDb from "../../utils/connectionDb"
+import User from "../../../models/User"
+import connectionDb from "../../../utils/connectionDb"
 
 connectionDb();
 

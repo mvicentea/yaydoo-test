@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 const { Schema } = mongoose;
-mongoose.Promise = global.Promise;
 
+mongoose.Promise = global.Promise;
 
 const UserSchema = new Schema({
     name: {
@@ -25,6 +25,5 @@ const UserSchema = new Schema({
         default: Date.now
     }
 });
-
 
 module.exports = mongoose.models.user || mongoose.model('user', UserSchema);  
